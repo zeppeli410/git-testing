@@ -1,3 +1,36 @@
-h1 {
-    color: red;
+body {
+    margin: 0;
+}
+
+.container {
+    background-color: cornflowerblue;
+
+    display:grid;
+    grid-gap: 10px;
+    grid-auto-columns: repeat(12, 1fr);
+    grid-auto-rows: minmax(200px, auto);
+    grid-template-areas: 
+    "header header header header"
+    "main main main main"
+    "map map footer footer";
+}
+
+.container > div {
+    background-color: darkslateblue;
+}
+
+.header{
+    grid-area: header;
+}
+
+.main{
+    grid-area: main;
+}
+
+.map {
+    grid-area: map;
+}
+
+.footer {
+    grid-area: footer;
 }
